@@ -22,7 +22,7 @@ console.log('La palabra es: ' + resultado);
 }
 else{
 
-    console.log('El código no funciona como vos querés. Reintenta poniendo un valor válido')
+    console.log('El código no funciona como vos querés. Reintentá poniendo un valor válido')
 
 }
 
