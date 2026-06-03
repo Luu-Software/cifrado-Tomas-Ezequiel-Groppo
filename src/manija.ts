@@ -1,12 +1,17 @@
 import { preguntar } from './lib/consola.ts';
-
+let tamañoPrefijo = 
 function obtenerPrefijo(numero: number, tamañoPrefijo: number): number {
-  return 0; // COMPLETAR
+  return numero / 10 ^ 16-(numero, tamañoPrefijo);
 }
 
 let tarjetaTexto: string = preguntar('Ingresá el número de tarjeta: ');
 
 let red: string = ''; // COMPLETAR
+let prefijo;
+prefijo=obtenerPrefijo(Number(tarjetaTexto), 2)
+
+if (prefijo===4){
+red=''
+}
 console.log(red);
-//Terminaló hoy, tratá de no preguntar tanto a Lu que ayer jodiste bastante.
-//Nico dijo algo de if (mastercard o amex) if  not (visa) [Nada confirmado pero igual para tenerlo en cuenta]
+//Tiene error, algún día lo soluciono :)
