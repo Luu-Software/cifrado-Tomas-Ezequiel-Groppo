@@ -1,5 +1,6 @@
 import { preguntar } from './lib/consola.ts';
-let tamañoPrefijo : number = 2;
+let tamañoPrefijo : string = preguntar("Cuantos digitos tiene tu tarjeta");
+
 function obtenerPrefijo(numero: number, tamañoPrefijo: number): number {
   return Math.floor(numero / 10 ** (16- tamañoPrefijo));
 }
@@ -15,9 +16,6 @@ if (Number(tamañoPrefijo)===2){
   }
   else if (obtenerPrefijo (Number(tarjetaTexto), Number(tamañoPrefijo))===51 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo)) === 52 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo)) === 53 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo)) === 54 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo)) === 55){
     red="Mastercard"
-  }
-  else if (obtenerPrefijo (Number(tarjetaTexto), Number(tamañoPrefijo))===40 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===41 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===42 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===43 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===44 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===45 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===46 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===47 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===48 || obtenerPrefijo(Number(tarjetaTexto), Number(tamañoPrefijo))===49){
-    red="VISA"
   }
   else{
     red = "No es un numero valido"
